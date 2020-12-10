@@ -6,4 +6,5 @@ RUN curl -L  https://github.com/alibaba/canal/releases/download/canal-1.1.5-alph
 RUN rm canal.adapter-1.1.5-SNAPSHOT.tar.gz
 WORKDIR /usr/share/canal/adapter
 STOPSIGNAL SIGQUIT
+
 ENTRYPOINT ["sh", "-c", "/usr/share/canal/adapter/bin/startup.sh && tail -F logs/adapter/adapter.log"]
