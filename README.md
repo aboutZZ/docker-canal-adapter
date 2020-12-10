@@ -1,0 +1,1 @@
+# docker-canal-adapter
