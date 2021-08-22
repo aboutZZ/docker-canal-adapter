@@ -2,10 +2,10 @@ FROM adoptopenjdk/openjdk11-openj9:alpine-jre
 
 VOLUME /tmp /usr/tmp
 # Using aliyun mirror to speed up in China.
-RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories; \
-    apk add --no-cache --update bash ca-certificates openssl curl tar; \
-    mkdir -p /usr/share/canal/adapter; \
-    curl -L  https://github.com/alibaba/canal/releases/download/canal-1.1.5/canal.adapter-1.1.5.tar.gz | tar xvz -C /usr/share/canal/adapter; \
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories && \
+    apk add --no-cache --update bash ca-certificates openssl curl tar && \
+    mkdir -p /usr/share/canal/adapter && \
+    curl -L  https://github.com/alibaba/canal/releases/download/canal-1.1.5/canal.adapter-1.1.5.tar.gz | tar xvz -C /usr/share/canal/adapter && \
     rm -f canal.adapter-1.1.5.tar.gz
 
 ENV SHELL /bin/bash
