@@ -1,3 +1,5 @@
+# WARNING！**DEPRECATED**
+Stop using canal! Alibaba Canal is really a shit. Bad docs, bad codes. [Flink CDC](https://github.com/ververica/flink-cdc-connectors) is what you need.
 # docker-canal-adapter
 This is the docker image for [canal adapter](https://github.com/alibaba/canal/releases). 
 ## Useage
@@ -12,5 +14,5 @@ docker run --name canal-adapter \
 
 ```
 ## Attention
-* The work dir: `/usr/share/canal/adapter`
+* The work dir: `/usr/share/canal/adapter`.
 * Log file: `/usr/share/canal/adapter/logs/adapter/adapter.log`, you may mount volume to the log file if you need.
